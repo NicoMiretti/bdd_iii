@@ -1,0 +1,2324 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="11/1/2025 10:38:32 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="NMIRETTI"
+  DTS:CreatorName="nmiretti\Nico"
+  DTS:DTSID="{5662261C-67E3-49CE-8FBB-742CDC3180CB}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1008.3"
+  DTS:LocaleID="22538"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="19"
+  DTS:VersionGUID="{6FD47692-4FC1-473F-AF5A-51448F4E73A7}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{FFDEBFFD-1658-482C-A505-6E81F1D1AAAD}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="22538"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="F:\Documentos\Bases de Datos III\Distribuidora\etl\Prueba.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Nro_Factura"
+              DTS:DTSID="{DDBEB9FA-5BAC-4D65-83E2-5187D6B8B92E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="133"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Fecha"
+              DTS:DTSID="{8ED5BB3E-CF79-4D51-B36E-4277EFA7BCE1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Id_articulo"
+              DTS:DTSID="{8C06B377-576A-4EE5-9DA9-E870D22E989E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Unidades"
+              DTS:DTSID="{83C2C19D-AC0D-4F3D-9748-72D691713CF3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Id_cliente"
+              DTS:DTSID="{234F5836-AD29-481B-9C25-2BCF74BBA598}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Id_vendedor"
+              DTS:DTSID="{5318CD06-AB4E-49A4-A9ED-41ACB1841F14}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="200"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="nombre_producto"
+              DTS:DTSID="{26EB9128-A446-40BF-BB97-A197C41BE850}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="200"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="familia_producto"
+              DTS:DTSID="{1D9EF758-A920-4E1A-8295-D305E09233FF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Nom_ciudad"
+              DTS:DTSID="{7B2DB31D-6A66-4E73-8392-797ECCDA6DC2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Nom_depto"
+              DTS:DTSID="{8FC84AC1-20E7-4123-A85E-0F88D2A07917}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="nombre_vendedor"
+              DTS:DTSID="{AE41E3C0-3AA6-476A-A83C-4B55D4A526A0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Nom_rubro"
+              DTS:DTSID="{0E2AE461-3DFA-40F8-A0AD-4879311B3721}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Carga Fact_Ventas"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{2E57C190-F7F8-443B-9823-86E45A7B7539}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Carga Fact_Ventas"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Carga Fact_Ventas\cant_ventas?"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Agregado;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;3"
+              description="Agrega datos mediante funciones como Average, Sum, Count, Max y Min. Por ejemplo, se agrupan datos para calcular la suma de las ventas por producto o el promedio de visitas por día."
+              name="cant_ventas?"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el número aproximado de claves GROUP BY que produce la agregación. Mínimo indica 500.000 valores de clave, Medio indica 5.000.000 de valores de clave y Alto indica más de 25.000.000 de valores de clave. No especificado indica que no se usó ningún valor de KeyScale."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Especifica el número exacto de claves GROUP BY que produce la agregación. Si se especifica un valor de KeyScale, el valor de Keys tiene prioridad."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el número aproximado de valores distintos de una columna que cuenta la agregación de forma distintiva. Mínimo indica 500.000 valores de clave, Medio indica 5.000.000 de valores de clave y Alto indica más de 25.000.000 valores de clave. No especificado indica que no se usa ningún valor de CountDistinctScale."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Especifica el número exacto de valores distintos de una columna que cuenta la agregación de forma distintiva. Si se especifica un valor de CountDistinctScale, el valor de CountDistinctKeys tiene prioridad."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el porcentaje en el que puede ampliarse la memoria durante la agregación. Los valores válidos están comprendidos entre 1 y 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Carga Fact_Ventas\cant_ventas?.Inputs[Entrada de agregado 1]"
+                  name="Entrada de agregado 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Carga Fact_Ventas\cant_ventas?.Inputs[Entrada de agregado 1].Columns[id_producto]"
+                      cachedDataType="i4"
+                      cachedName="id_producto"
+                      lineageId="Package\Carga Fact_Ventas\Look Up DIM_PRODUCTO.Outputs[Salida de entradas coincidentes de búsqueda].Columns[id_producto]" />
+                    <inputColumn
+                      refId="Package\Carga Fact_Ventas\cant_ventas?.Inputs[Entrada de agregado 1].Columns[id_distr_geografica]"
+                      cachedDataType="i4"
+                      cachedName="id_distr_geografica"
+                      lineageId="Package\Carga Fact_Ventas\Look Up DIM_DISTR_GEOGRAFICA.Outputs[Salida de entradas coincidentes de búsqueda].Columns[id_distr_geografica]" />
+                    <inputColumn
+                      refId="Package\Carga Fact_Ventas\cant_ventas?.Inputs[Entrada de agregado 1].Columns[id_vendedor]"
+                      cachedDataType="i4"
+                      cachedName="id_vendedor"
+                      lineageId="Package\Carga Fact_Ventas\Look Up DIM_VENDEDOR.Outputs[Salida de entradas coincidentes de búsqueda].Columns[id_vendedor]" />
+                    <inputColumn
+                      refId="Package\Carga Fact_Ventas\cant_ventas?.Inputs[Entrada de agregado 1].Columns[id_rubro]"
+                      cachedDataType="i4"
+                      cachedName="id_rubro"
+                      lineageId="Package\Carga Fact_Ventas\Look Up DIM_RUBRO.Outputs[Salida de entradas coincidentes de búsqueda].Columns[id_rubro]" />
+                    <inputColumn
+                      refId="Package\Carga Fact_Ventas\cant_ventas?.Inputs[Entrada de agregado 1].Columns[id_tiempo]"
+                      cachedDataType="i4"
+                      cachedName="id_tiempo"
+                      lineageId="Package\Carga Fact_Ventas\Look Up DIM_TIEMPO.Outputs[Salida de entradas coincidentes de búsqueda].Columns[id_tiempo]" />
+                    <inputColumn
+                      refId="Package\Carga Fact_Ventas\cant_ventas?.Inputs[Entrada de agregado 1].Columns[Nro_Factura]"
+                      cachedDataType="i4"
+                      cachedName="Nro_Factura"
+                      lineageId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].Columns[Nro_Factura]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Carga Fact_Ventas\cant_ventas?.Outputs[Salida de agregado 1]"
+                  name="Salida de agregado 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Especifica el número aproximado de claves GROUP BY que produce la agregación. Mínimo indica 500.000 valores de clave, Medio indica 5.000.000 de valores de clave y Alto indica más de 25.000.000 de valores de clave. No especificado indica que no se usó ningún valor de KeyScale."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Especifica el número exacto de claves GROUP BY que produce la agregación. Si se especifica un valor de KeyScale, el valor de Keys tiene prioridad."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\cant_ventas?.Outputs[Salida de agregado 1].Columns[id_producto]"
+                      dataType="i4"
+                      lineageId="Package\Carga Fact_Ventas\cant_ventas?.Outputs[Salida de agregado 1].Columns[id_producto]"
+                      name="id_producto">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el id. de la columna de entrada usada en la agregación."
+                          name="AggregationColumnId">#{Package\Carga Fact_Ventas\Look Up DIM_PRODUCTO.Outputs[Salida de entradas coincidentes de búsqueda].Columns[id_producto]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el tipo de agregación."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica si la columna requiere tratamiento especial porque puede contener datos de tamaño excesivo o porque requiere mayor precisión que el tipo de datos float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación de cadenas."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\cant_ventas?.Outputs[Salida de agregado 1].Columns[id_distr_geografica]"
+                      dataType="i4"
+                      lineageId="Package\Carga Fact_Ventas\cant_ventas?.Outputs[Salida de agregado 1].Columns[id_distr_geografica]"
+                      name="id_distr_geografica">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el id. de la columna de entrada usada en la agregación."
+                          name="AggregationColumnId">#{Package\Carga Fact_Ventas\Look Up DIM_DISTR_GEOGRAFICA.Outputs[Salida de entradas coincidentes de búsqueda].Columns[id_distr_geografica]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el tipo de agregación."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica si la columna requiere tratamiento especial porque puede contener datos de tamaño excesivo o porque requiere mayor precisión que el tipo de datos float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación de cadenas."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\cant_ventas?.Outputs[Salida de agregado 1].Columns[id_vendedor]"
+                      dataType="i4"
+                      lineageId="Package\Carga Fact_Ventas\cant_ventas?.Outputs[Salida de agregado 1].Columns[id_vendedor]"
+                      name="id_vendedor">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el id. de la columna de entrada usada en la agregación."
+                          name="AggregationColumnId">#{Package\Carga Fact_Ventas\Look Up DIM_VENDEDOR.Outputs[Salida de entradas coincidentes de búsqueda].Columns[id_vendedor]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el tipo de agregación."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica si la columna requiere tratamiento especial porque puede contener datos de tamaño excesivo o porque requiere mayor precisión que el tipo de datos float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación de cadenas."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\cant_ventas?.Outputs[Salida de agregado 1].Columns[id_rubro]"
+                      dataType="i4"
+                      lineageId="Package\Carga Fact_Ventas\cant_ventas?.Outputs[Salida de agregado 1].Columns[id_rubro]"
+                      name="id_rubro">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el id. de la columna de entrada usada en la agregación."
+                          name="AggregationColumnId">#{Package\Carga Fact_Ventas\Look Up DIM_RUBRO.Outputs[Salida de entradas coincidentes de búsqueda].Columns[id_rubro]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el tipo de agregación."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica si la columna requiere tratamiento especial porque puede contener datos de tamaño excesivo o porque requiere mayor precisión que el tipo de datos float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación de cadenas."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\cant_ventas?.Outputs[Salida de agregado 1].Columns[id_tiempo]"
+                      dataType="i4"
+                      lineageId="Package\Carga Fact_Ventas\cant_ventas?.Outputs[Salida de agregado 1].Columns[id_tiempo]"
+                      name="id_tiempo">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el id. de la columna de entrada usada en la agregación."
+                          name="AggregationColumnId">#{Package\Carga Fact_Ventas\Look Up DIM_TIEMPO.Outputs[Salida de entradas coincidentes de búsqueda].Columns[id_tiempo]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el tipo de agregación."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica si la columna requiere tratamiento especial porque puede contener datos de tamaño excesivo o porque requiere mayor precisión que el tipo de datos float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación de cadenas."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\cant_ventas?.Outputs[Salida de agregado 1].Columns[cant_ventas]"
+                      dataType="ui8"
+                      lineageId="Package\Carga Fact_Ventas\cant_ventas?.Outputs[Salida de agregado 1].Columns[cant_ventas]"
+                      name="cant_ventas">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el id. de la columna de entrada usada en la agregación."
+                          name="AggregationColumnId">#{Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].Columns[Nro_Factura]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el tipo de agregación."
+                          name="AggregationType"
+                          typeConverter="AggregationType">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica si la columna requiere tratamiento especial porque puede contener datos de tamaño excesivo o porque requiere mayor precisión que el tipo de datos float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación de cadenas."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Carga Fact_Ventas\Derivo anio y mes"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Columna derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Crea nuevos valores de columna aplicando expresiones a las columnas de entrada de la transformación. Crea nuevas columnas o sobrescribe las columnas existentes. Por ejemplo, se concatenan los valores de las columnas 'nombre' y 'apellidos' para crear una columna 'nombre completo'."
+              name="Derivo anio y mes"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Carga Fact_Ventas\Derivo anio y mes.Inputs[Entrada de columna derivada]"
+                  description="Entrada en la transformación Columna derivada"
+                  name="Entrada de columna derivada">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Carga Fact_Ventas\Derivo anio y mes.Inputs[Entrada de columna derivada].Columns[Fecha]"
+                      cachedDataType="dbDate"
+                      cachedName="Fecha"
+                      lineageId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].Columns[Fecha]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Carga Fact_Ventas\Derivo anio y mes.Outputs[Salida de columna derivada]"
+                  description="Salida predeterminada de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  name="Salida de columna derivada"
+                  synchronousInputId="Package\Carga Fact_Ventas\Derivo anio y mes.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Derivo anio y mes.Outputs[Salida de columna derivada].Columns[anio]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Carga Fact_Ventas\Derivo anio y mes.Outputs[Salida de columna derivada].Columns[anio]"
+                      name="anio"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">[DATEPART]("yyyy",#{Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].Columns[Fecha]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">DATEPART("yyyy",Fecha)</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Derivo anio y mes.Outputs[Salida de columna derivada].Columns[mes]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Carga Fact_Ventas\Derivo anio y mes.Outputs[Salida de columna derivada].Columns[mes]"
+                      name="mes"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">[DATEPART]("mm",#{Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].Columns[Fecha]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">DATEPART("mm",Fecha)</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Carga Fact_Ventas\Derivo anio y mes.Outputs[Salida de error de columna derivada]"
+                  description="Salida de error de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de columna derivada"
+                  synchronousInputId="Package\Carga Fact_Ventas\Derivo anio y mes.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Derivo anio y mes.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Carga Fact_Ventas\Derivo anio y mes.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Derivo anio y mes.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Carga Fact_Ventas\Derivo anio y mes.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Carga Fact_Ventas\Destino de OLE DB"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino de OLE DB"
+              name="Destino de OLE DB"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">[dbo].[Fact_Ventas]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica opciones para usar con la carga rápida. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Carga Fact_Ventas\Destino de OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="{A8560F39-9EDC-4801-B361-12AC430A1ADF}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.DistribuidoraDW]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Carga Fact_Ventas\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Carga Fact_Ventas\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[id_producto]"
+                      cachedDataType="i4"
+                      cachedName="id_producto"
+                      externalMetadataColumnId="Package\Carga Fact_Ventas\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[id_producto]"
+                      lineageId="Package\Carga Fact_Ventas\cant_ventas?.Outputs[Salida de agregado 1].Columns[id_producto]" />
+                    <inputColumn
+                      refId="Package\Carga Fact_Ventas\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[id_distr_geografica]"
+                      cachedDataType="i4"
+                      cachedName="id_distr_geografica"
+                      externalMetadataColumnId="Package\Carga Fact_Ventas\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[id_distr_geografica]"
+                      lineageId="Package\Carga Fact_Ventas\cant_ventas?.Outputs[Salida de agregado 1].Columns[id_distr_geografica]" />
+                    <inputColumn
+                      refId="Package\Carga Fact_Ventas\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[id_vendedor]"
+                      cachedDataType="i4"
+                      cachedName="id_vendedor"
+                      externalMetadataColumnId="Package\Carga Fact_Ventas\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[id_vendedor]"
+                      lineageId="Package\Carga Fact_Ventas\cant_ventas?.Outputs[Salida de agregado 1].Columns[id_vendedor]" />
+                    <inputColumn
+                      refId="Package\Carga Fact_Ventas\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[id_rubro]"
+                      cachedDataType="i4"
+                      cachedName="id_rubro"
+                      externalMetadataColumnId="Package\Carga Fact_Ventas\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[id_rubro]"
+                      lineageId="Package\Carga Fact_Ventas\cant_ventas?.Outputs[Salida de agregado 1].Columns[id_rubro]" />
+                    <inputColumn
+                      refId="Package\Carga Fact_Ventas\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[id_tiempo]"
+                      cachedDataType="i4"
+                      cachedName="id_tiempo"
+                      externalMetadataColumnId="Package\Carga Fact_Ventas\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[id_tiempo]"
+                      lineageId="Package\Carga Fact_Ventas\cant_ventas?.Outputs[Salida de agregado 1].Columns[id_tiempo]" />
+                    <inputColumn
+                      refId="Package\Carga Fact_Ventas\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[cant_ventas]"
+                      cachedDataType="ui8"
+                      cachedName="cant_ventas"
+                      externalMetadataColumnId="Package\Carga Fact_Ventas\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[cant_ventas]"
+                      lineageId="Package\Carga Fact_Ventas\cant_ventas?.Outputs[Salida de agregado 1].Columns[cant_ventas]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Carga Fact_Ventas\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[id_fact]"
+                      dataType="i4"
+                      name="id_fact" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Fact_Ventas\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[id_tiempo]"
+                      dataType="i4"
+                      name="id_tiempo" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Fact_Ventas\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[id_producto]"
+                      dataType="i4"
+                      name="id_producto" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Fact_Ventas\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[id_distr_geografica]"
+                      dataType="i4"
+                      name="id_distr_geografica" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Fact_Ventas\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[id_vendedor]"
+                      dataType="i4"
+                      name="id_vendedor" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Fact_Ventas\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[id_rubro]"
+                      dataType="i4"
+                      name="id_rubro" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Fact_Ventas\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[cant_ventas]"
+                      dataType="i4"
+                      name="cant_ventas" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Carga Fact_Ventas\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de OLE DB"
+                  synchronousInputId="Package\Carga Fact_Ventas\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Carga Fact_Ventas\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Carga Fact_Ventas\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Carga Fact_Ventas\Look Up DIM_DISTR_GEOGRAFICA"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Búsqueda;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;6"
+              description="Combina columnas adicionales con el flujo de datos mediante la búsqueda de valores en una tabla. Por ejemplo, se combina la columna 'id. de empleado' con la tabla de empleados para obtener la 'fecha de contratación' y 'el nombre de empleado'. Se recomienda esta transformación cuando hay suficiente espacio en memoria para la tabla de búsqueda."
+              name="Look Up DIM_DISTR_GEOGRAFICA"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL que genera la tabla de búsqueda."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[Dim_Distr_Geografica]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica una instrucción SQL que usa parámetros para generar la tabla de búsqueda."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[Dim_Distr_Geografica]) [refTable]
+where [refTable].[ciudad] = ? and [refTable].[departamento] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el tipo de conexión utilizado para tener acceso al conjunto de datos de referencia."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el tipo de caché de la tabla de búsqueda."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cómo la transformación de búsquedas trata las filas sin entradas coincidentes en el conjunto de datos de referencia."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el porcentaje de la caché asignado a las filas sin entradas coincidentes en el conjunto de datos de referencia."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Uso de memoria máximo para la caché de referencia en una plataforma de 32 bits."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Uso de memoria máximo para la caché de referencia en una plataforma de 64 bits."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica si se debe hacer referencia a metadatos en formato XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_distr_geografica" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="departamento" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="ciudad" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
+                  name="ParameterMap">#{Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].Columns[Nom_ciudad]};#{Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].Columns[Nom_depto]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina si las claves duplicadas de los datos de referencia se deben tratar como errores cuando se usa el modo de caché."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Carga Fact_Ventas\Look Up DIM_DISTR_GEOGRAFICA.Connections[OleDbConnection]"
+                  connectionManagerID="{A8560F39-9EDC-4801-B361-12AC430A1ADF}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.DistribuidoraDW]"
+                  description="Administrador de conexiones utilizado para obtener acceso a los datos de búsqueda."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Carga Fact_Ventas\Look Up DIM_DISTR_GEOGRAFICA.Inputs[Entrada de búsqueda]"
+                  name="Entrada de búsqueda">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Carga Fact_Ventas\Look Up DIM_DISTR_GEOGRAFICA.Inputs[Entrada de búsqueda].Columns[Nom_ciudad]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="Nom_ciudad"
+                      lineageId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].Columns[Nom_ciudad]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia con la que se combina una columna."
+                          name="JoinToReferenceColumn">ciudad</property>
+                        <property
+                          dataType="System.Null"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Carga Fact_Ventas\Look Up DIM_DISTR_GEOGRAFICA.Inputs[Entrada de búsqueda].Columns[Nom_depto]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="Nom_depto"
+                      lineageId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].Columns[Nom_depto]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia con la que se combina una columna."
+                          name="JoinToReferenceColumn">departamento</property>
+                        <property
+                          dataType="System.Null"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Carga Fact_Ventas\Look Up DIM_DISTR_GEOGRAFICA.Outputs[Salida de entradas coincidentes de búsqueda]"
+                  errorOrTruncationOperation="Búsqueda"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Salida de entradas coincidentes de búsqueda"
+                  synchronousInputId="Package\Carga Fact_Ventas\Look Up DIM_DISTR_GEOGRAFICA.Inputs[Entrada de búsqueda]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Look Up DIM_DISTR_GEOGRAFICA.Outputs[Salida de entradas coincidentes de búsqueda].Columns[id_distr_geografica]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copiar columna"
+                      lineageId="Package\Carga Fact_Ventas\Look Up DIM_DISTR_GEOGRAFICA.Outputs[Salida de entradas coincidentes de búsqueda].Columns[id_distr_geografica]"
+                      name="id_distr_geografica"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn">id_distr_geografica</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Carga Fact_Ventas\Look Up DIM_DISTR_GEOGRAFICA.Outputs[Salida de entradas no coincidentes de búsqueda]"
+                  description="Salida de búsqueda que trata las filas sin entradas coincidentes en el conjunto de datos de referencia. Utilice esta salida cuando la propiedad NoMatchBehavior esté establecida en 'Enviar las filas sin entradas coincidentes a la salida de entradas no coincidentes'."
+                  exclusionGroup="1"
+                  name="Salida de entradas no coincidentes de búsqueda"
+                  synchronousInputId="Package\Carga Fact_Ventas\Look Up DIM_DISTR_GEOGRAFICA.Inputs[Entrada de búsqueda]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Carga Fact_Ventas\Look Up DIM_DISTR_GEOGRAFICA.Outputs[Salida de error de búsqueda]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de búsqueda"
+                  synchronousInputId="Package\Carga Fact_Ventas\Look Up DIM_DISTR_GEOGRAFICA.Inputs[Entrada de búsqueda]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Look Up DIM_DISTR_GEOGRAFICA.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Carga Fact_Ventas\Look Up DIM_DISTR_GEOGRAFICA.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Look Up DIM_DISTR_GEOGRAFICA.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Carga Fact_Ventas\Look Up DIM_DISTR_GEOGRAFICA.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Carga Fact_Ventas\Look Up DIM_PRODUCTO"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Búsqueda;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;6"
+              description="Combina columnas adicionales con el flujo de datos mediante la búsqueda de valores en una tabla. Por ejemplo, se combina la columna 'id. de empleado' con la tabla de empleados para obtener la 'fecha de contratación' y 'el nombre de empleado'. Se recomienda esta transformación cuando hay suficiente espacio en memoria para la tabla de búsqueda."
+              name="Look Up DIM_PRODUCTO"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL que genera la tabla de búsqueda."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[Dim_Producto]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica una instrucción SQL que usa parámetros para generar la tabla de búsqueda."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[Dim_Producto]) [refTable]
+where [refTable].[nombre_producto] = ? and [refTable].[familia_producto] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el tipo de conexión utilizado para tener acceso al conjunto de datos de referencia."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el tipo de caché de la tabla de búsqueda."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cómo la transformación de búsquedas trata las filas sin entradas coincidentes en el conjunto de datos de referencia."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el porcentaje de la caché asignado a las filas sin entradas coincidentes en el conjunto de datos de referencia."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Uso de memoria máximo para la caché de referencia en una plataforma de 32 bits."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Uso de memoria máximo para la caché de referencia en una plataforma de 64 bits."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica si se debe hacer referencia a metadatos en formato XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_producto" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="familia_producto" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="nombre_producto" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
+                  name="ParameterMap">#{Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].Columns[nombre_producto]};#{Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].Columns[familia_producto]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina si las claves duplicadas de los datos de referencia se deben tratar como errores cuando se usa el modo de caché."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Carga Fact_Ventas\Look Up DIM_PRODUCTO.Connections[OleDbConnection]"
+                  connectionManagerID="{A8560F39-9EDC-4801-B361-12AC430A1ADF}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.DistribuidoraDW]"
+                  description="Administrador de conexiones utilizado para obtener acceso a los datos de búsqueda."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Carga Fact_Ventas\Look Up DIM_PRODUCTO.Inputs[Entrada de búsqueda]"
+                  name="Entrada de búsqueda">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Carga Fact_Ventas\Look Up DIM_PRODUCTO.Inputs[Entrada de búsqueda].Columns[nombre_producto]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="200"
+                      cachedName="nombre_producto"
+                      lineageId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].Columns[nombre_producto]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia con la que se combina una columna."
+                          name="JoinToReferenceColumn">nombre_producto</property>
+                        <property
+                          dataType="System.Null"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Carga Fact_Ventas\Look Up DIM_PRODUCTO.Inputs[Entrada de búsqueda].Columns[familia_producto]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="200"
+                      cachedName="familia_producto"
+                      lineageId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].Columns[familia_producto]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia con la que se combina una columna."
+                          name="JoinToReferenceColumn">familia_producto</property>
+                        <property
+                          dataType="System.Null"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Carga Fact_Ventas\Look Up DIM_PRODUCTO.Outputs[Salida de entradas coincidentes de búsqueda]"
+                  errorOrTruncationOperation="Búsqueda"
+                  exclusionGroup="1"
+                  name="Salida de entradas coincidentes de búsqueda"
+                  synchronousInputId="Package\Carga Fact_Ventas\Look Up DIM_PRODUCTO.Inputs[Entrada de búsqueda]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Look Up DIM_PRODUCTO.Outputs[Salida de entradas coincidentes de búsqueda].Columns[id_producto]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copiar columna"
+                      lineageId="Package\Carga Fact_Ventas\Look Up DIM_PRODUCTO.Outputs[Salida de entradas coincidentes de búsqueda].Columns[id_producto]"
+                      name="id_producto"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn">id_producto</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Carga Fact_Ventas\Look Up DIM_PRODUCTO.Outputs[Salida de entradas no coincidentes de búsqueda]"
+                  description="Salida de búsqueda que trata las filas sin entradas coincidentes en el conjunto de datos de referencia. Utilice esta salida cuando la propiedad NoMatchBehavior esté establecida en 'Enviar las filas sin entradas coincidentes a la salida de entradas no coincidentes'."
+                  exclusionGroup="1"
+                  name="Salida de entradas no coincidentes de búsqueda"
+                  synchronousInputId="Package\Carga Fact_Ventas\Look Up DIM_PRODUCTO.Inputs[Entrada de búsqueda]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Carga Fact_Ventas\Look Up DIM_PRODUCTO.Outputs[Salida de error de búsqueda]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de búsqueda"
+                  synchronousInputId="Package\Carga Fact_Ventas\Look Up DIM_PRODUCTO.Inputs[Entrada de búsqueda]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Look Up DIM_PRODUCTO.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Carga Fact_Ventas\Look Up DIM_PRODUCTO.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Look Up DIM_PRODUCTO.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Carga Fact_Ventas\Look Up DIM_PRODUCTO.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Carga Fact_Ventas\Look Up DIM_RUBRO"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Búsqueda;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;6"
+              description="Combina columnas adicionales con el flujo de datos mediante la búsqueda de valores en una tabla. Por ejemplo, se combina la columna 'id. de empleado' con la tabla de empleados para obtener la 'fecha de contratación' y 'el nombre de empleado'. Se recomienda esta transformación cuando hay suficiente espacio en memoria para la tabla de búsqueda."
+              name="Look Up DIM_RUBRO"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL que genera la tabla de búsqueda."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[Dim_Rubro]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica una instrucción SQL que usa parámetros para generar la tabla de búsqueda."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[Dim_Rubro]) [refTable]
+where [refTable].[nom_rubro] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el tipo de conexión utilizado para tener acceso al conjunto de datos de referencia."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el tipo de caché de la tabla de búsqueda."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cómo la transformación de búsquedas trata las filas sin entradas coincidentes en el conjunto de datos de referencia."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el porcentaje de la caché asignado a las filas sin entradas coincidentes en el conjunto de datos de referencia."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Uso de memoria máximo para la caché de referencia en una plataforma de 32 bits."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Uso de memoria máximo para la caché de referencia en una plataforma de 64 bits."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica si se debe hacer referencia a metadatos en formato XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_rubro" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nom_rubro" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
+                  name="ParameterMap">#{Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].Columns[Nom_rubro]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina si las claves duplicadas de los datos de referencia se deben tratar como errores cuando se usa el modo de caché."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Carga Fact_Ventas\Look Up DIM_RUBRO.Connections[OleDbConnection]"
+                  connectionManagerID="{A8560F39-9EDC-4801-B361-12AC430A1ADF}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.DistribuidoraDW]"
+                  description="Administrador de conexiones utilizado para obtener acceso a los datos de búsqueda."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Carga Fact_Ventas\Look Up DIM_RUBRO.Inputs[Entrada de búsqueda]"
+                  name="Entrada de búsqueda">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Carga Fact_Ventas\Look Up DIM_RUBRO.Inputs[Entrada de búsqueda].Columns[Nom_rubro]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="Nom_rubro"
+                      lineageId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].Columns[Nom_rubro]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia con la que se combina una columna."
+                          name="JoinToReferenceColumn">nom_rubro</property>
+                        <property
+                          dataType="System.Null"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Carga Fact_Ventas\Look Up DIM_RUBRO.Outputs[Salida de entradas coincidentes de búsqueda]"
+                  errorOrTruncationOperation="Búsqueda"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Salida de entradas coincidentes de búsqueda"
+                  synchronousInputId="Package\Carga Fact_Ventas\Look Up DIM_RUBRO.Inputs[Entrada de búsqueda]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Look Up DIM_RUBRO.Outputs[Salida de entradas coincidentes de búsqueda].Columns[id_rubro]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copiar columna"
+                      lineageId="Package\Carga Fact_Ventas\Look Up DIM_RUBRO.Outputs[Salida de entradas coincidentes de búsqueda].Columns[id_rubro]"
+                      name="id_rubro"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn">id_rubro</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Carga Fact_Ventas\Look Up DIM_RUBRO.Outputs[Salida de entradas no coincidentes de búsqueda]"
+                  description="Salida de búsqueda que trata las filas sin entradas coincidentes en el conjunto de datos de referencia. Utilice esta salida cuando la propiedad NoMatchBehavior esté establecida en 'Enviar las filas sin entradas coincidentes a la salida de entradas no coincidentes'."
+                  exclusionGroup="1"
+                  name="Salida de entradas no coincidentes de búsqueda"
+                  synchronousInputId="Package\Carga Fact_Ventas\Look Up DIM_RUBRO.Inputs[Entrada de búsqueda]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Carga Fact_Ventas\Look Up DIM_RUBRO.Outputs[Salida de error de búsqueda]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de búsqueda"
+                  synchronousInputId="Package\Carga Fact_Ventas\Look Up DIM_RUBRO.Inputs[Entrada de búsqueda]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Look Up DIM_RUBRO.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Carga Fact_Ventas\Look Up DIM_RUBRO.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Look Up DIM_RUBRO.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Carga Fact_Ventas\Look Up DIM_RUBRO.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Carga Fact_Ventas\Look Up DIM_TIEMPO"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Búsqueda;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;6"
+              description="Combina columnas adicionales con el flujo de datos mediante la búsqueda de valores en una tabla. Por ejemplo, se combina la columna 'id. de empleado' con la tabla de empleados para obtener la 'fecha de contratación' y 'el nombre de empleado'. Se recomienda esta transformación cuando hay suficiente espacio en memoria para la tabla de búsqueda."
+              name="Look Up DIM_TIEMPO"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL que genera la tabla de búsqueda."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[Dim_Tiempo]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica una instrucción SQL que usa parámetros para generar la tabla de búsqueda."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[Dim_Tiempo]) [refTable]
+where [refTable].[anio] = ? and [refTable].[mes] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el tipo de conexión utilizado para tener acceso al conjunto de datos de referencia."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el tipo de caché de la tabla de búsqueda."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cómo la transformación de búsquedas trata las filas sin entradas coincidentes en el conjunto de datos de referencia."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el porcentaje de la caché asignado a las filas sin entradas coincidentes en el conjunto de datos de referencia."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Uso de memoria máximo para la caché de referencia en una plataforma de 32 bits."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Uso de memoria máximo para la caché de referencia en una plataforma de 64 bits."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica si se debe hacer referencia a metadatos en formato XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_tiempo" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="anio" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="mes" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
+                  name="ParameterMap">#{Package\Carga Fact_Ventas\Derivo anio y mes.Outputs[Salida de columna derivada].Columns[anio]};#{Package\Carga Fact_Ventas\Derivo anio y mes.Outputs[Salida de columna derivada].Columns[mes]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina si las claves duplicadas de los datos de referencia se deben tratar como errores cuando se usa el modo de caché."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Carga Fact_Ventas\Look Up DIM_TIEMPO.Connections[OleDbConnection]"
+                  connectionManagerID="{A8560F39-9EDC-4801-B361-12AC430A1ADF}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.DistribuidoraDW]"
+                  description="Administrador de conexiones utilizado para obtener acceso a los datos de búsqueda."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Carga Fact_Ventas\Look Up DIM_TIEMPO.Inputs[Entrada de búsqueda]"
+                  name="Entrada de búsqueda">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Carga Fact_Ventas\Look Up DIM_TIEMPO.Inputs[Entrada de búsqueda].Columns[anio]"
+                      cachedDataType="i4"
+                      cachedName="anio"
+                      lineageId="Package\Carga Fact_Ventas\Derivo anio y mes.Outputs[Salida de columna derivada].Columns[anio]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia con la que se combina una columna."
+                          name="JoinToReferenceColumn">anio</property>
+                        <property
+                          dataType="System.Null"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Carga Fact_Ventas\Look Up DIM_TIEMPO.Inputs[Entrada de búsqueda].Columns[mes]"
+                      cachedDataType="i4"
+                      cachedName="mes"
+                      lineageId="Package\Carga Fact_Ventas\Derivo anio y mes.Outputs[Salida de columna derivada].Columns[mes]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia con la que se combina una columna."
+                          name="JoinToReferenceColumn">mes</property>
+                        <property
+                          dataType="System.Null"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Carga Fact_Ventas\Look Up DIM_TIEMPO.Outputs[Salida de entradas coincidentes de búsqueda]"
+                  errorOrTruncationOperation="Búsqueda"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Salida de entradas coincidentes de búsqueda"
+                  synchronousInputId="Package\Carga Fact_Ventas\Look Up DIM_TIEMPO.Inputs[Entrada de búsqueda]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Look Up DIM_TIEMPO.Outputs[Salida de entradas coincidentes de búsqueda].Columns[id_tiempo]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copiar columna"
+                      lineageId="Package\Carga Fact_Ventas\Look Up DIM_TIEMPO.Outputs[Salida de entradas coincidentes de búsqueda].Columns[id_tiempo]"
+                      name="id_tiempo"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn">id_tiempo</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Carga Fact_Ventas\Look Up DIM_TIEMPO.Outputs[Salida de entradas no coincidentes de búsqueda]"
+                  description="Salida de búsqueda que trata las filas sin entradas coincidentes en el conjunto de datos de referencia. Utilice esta salida cuando la propiedad NoMatchBehavior esté establecida en 'Enviar las filas sin entradas coincidentes a la salida de entradas no coincidentes'."
+                  exclusionGroup="1"
+                  name="Salida de entradas no coincidentes de búsqueda"
+                  synchronousInputId="Package\Carga Fact_Ventas\Look Up DIM_TIEMPO.Inputs[Entrada de búsqueda]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Carga Fact_Ventas\Look Up DIM_TIEMPO.Outputs[Salida de error de búsqueda]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de búsqueda"
+                  synchronousInputId="Package\Carga Fact_Ventas\Look Up DIM_TIEMPO.Inputs[Entrada de búsqueda]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Look Up DIM_TIEMPO.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Carga Fact_Ventas\Look Up DIM_TIEMPO.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Look Up DIM_TIEMPO.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Carga Fact_Ventas\Look Up DIM_TIEMPO.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Carga Fact_Ventas\Look Up DIM_VENDEDOR"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Búsqueda;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;6"
+              description="Combina columnas adicionales con el flujo de datos mediante la búsqueda de valores en una tabla. Por ejemplo, se combina la columna 'id. de empleado' con la tabla de empleados para obtener la 'fecha de contratación' y 'el nombre de empleado'. Se recomienda esta transformación cuando hay suficiente espacio en memoria para la tabla de búsqueda."
+              name="Look Up DIM_VENDEDOR"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL que genera la tabla de búsqueda."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[Dim_Vendedor]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica una instrucción SQL que usa parámetros para generar la tabla de búsqueda."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[Dim_Vendedor]) [refTable]
+where [refTable].[nombre_vendedor] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el tipo de conexión utilizado para tener acceso al conjunto de datos de referencia."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el tipo de caché de la tabla de búsqueda."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cómo la transformación de búsquedas trata las filas sin entradas coincidentes en el conjunto de datos de referencia."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el porcentaje de la caché asignado a las filas sin entradas coincidentes en el conjunto de datos de referencia."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Uso de memoria máximo para la caché de referencia en una plataforma de 32 bits."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Uso de memoria máximo para la caché de referencia en una plataforma de 64 bits."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica si se debe hacer referencia a metadatos en formato XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_vendedor" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nombre_vendedor" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="hs_capacitacion" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="antiguedad" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="sueldo" dataType="DT_NUMERIC" length="0" precision="10" scale="2" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
+                  name="ParameterMap">#{Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].Columns[nombre_vendedor]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina si las claves duplicadas de los datos de referencia se deben tratar como errores cuando se usa el modo de caché."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Carga Fact_Ventas\Look Up DIM_VENDEDOR.Connections[OleDbConnection]"
+                  connectionManagerID="{A8560F39-9EDC-4801-B361-12AC430A1ADF}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.DistribuidoraDW]"
+                  description="Administrador de conexiones utilizado para obtener acceso a los datos de búsqueda."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Carga Fact_Ventas\Look Up DIM_VENDEDOR.Inputs[Entrada de búsqueda]"
+                  name="Entrada de búsqueda">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Carga Fact_Ventas\Look Up DIM_VENDEDOR.Inputs[Entrada de búsqueda].Columns[nombre_vendedor]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="nombre_vendedor"
+                      lineageId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].Columns[nombre_vendedor]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia con la que se combina una columna."
+                          name="JoinToReferenceColumn">nombre_vendedor</property>
+                        <property
+                          dataType="System.Null"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Carga Fact_Ventas\Look Up DIM_VENDEDOR.Outputs[Salida de entradas coincidentes de búsqueda]"
+                  errorOrTruncationOperation="Búsqueda"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Salida de entradas coincidentes de búsqueda"
+                  synchronousInputId="Package\Carga Fact_Ventas\Look Up DIM_VENDEDOR.Inputs[Entrada de búsqueda]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Look Up DIM_VENDEDOR.Outputs[Salida de entradas coincidentes de búsqueda].Columns[id_vendedor]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copiar columna"
+                      lineageId="Package\Carga Fact_Ventas\Look Up DIM_VENDEDOR.Outputs[Salida de entradas coincidentes de búsqueda].Columns[id_vendedor]"
+                      name="id_vendedor"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn">id_vendedor</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Carga Fact_Ventas\Look Up DIM_VENDEDOR.Outputs[Salida de entradas no coincidentes de búsqueda]"
+                  description="Salida de búsqueda que trata las filas sin entradas coincidentes en el conjunto de datos de referencia. Utilice esta salida cuando la propiedad NoMatchBehavior esté establecida en 'Enviar las filas sin entradas coincidentes a la salida de entradas no coincidentes'."
+                  exclusionGroup="1"
+                  name="Salida de entradas no coincidentes de búsqueda"
+                  synchronousInputId="Package\Carga Fact_Ventas\Look Up DIM_VENDEDOR.Inputs[Entrada de búsqueda]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Carga Fact_Ventas\Look Up DIM_VENDEDOR.Outputs[Salida de error de búsqueda]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de búsqueda"
+                  synchronousInputId="Package\Carga Fact_Ventas\Look Up DIM_VENDEDOR.Inputs[Entrada de búsqueda]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Look Up DIM_VENDEDOR.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Carga Fact_Ventas\Look Up DIM_VENDEDOR.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Look Up DIM_VENDEDOR.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Carga Fact_Ventas\Look Up DIM_VENDEDOR.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Carga Fact_Ventas\Origen Facturas-Operativa"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7"
+              description="Origen de OLE DB"
+              name="Origen Facturas-Operativa"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT 
+    f.Nro_Factura,
+    f.Fecha,
+    rf.Id_articulo,
+    rf.Unidades,
+    f.Id_cliente,
+    f.Id_vendedor,
+    -- para Dim_Producto
+    c1.Descripcion AS nombre_producto,
+    c2.Descripcion AS familia_producto,
+    -- para Dim_Distr_Geografica
+    ci.Nom_ciudad,
+    d.Nom_depto,
+    -- para Dim_Vendedor
+    v.Nombre AS nombre_vendedor,
+    -- para Dim_Rubro
+    r.Nom_rubro
+FROM Facturas f
+JOIN RegistrosFacturas rf ON f.Nro_Factura = rf.Nro_Factura
+JOIN Articulos a ON rf.Id_articulo = a.Id_articulo
+JOIN Productos p ON a.Id_producto = p.Id_producto
+JOIN Codigos c1 ON c1.Tipo='Producto' AND c1.Codigo=p.Id_producto
+JOIN Codigos c2 ON c2.Tipo='Familia' AND c2.Codigo=p.Id_familia
+JOIN Clientes c ON f.Id_cliente = c.Id_cliente
+JOIN Rubros r ON c.Id_rubro = r.Id_rubro      -- 🔹 agregado
+JOIN Ciudades ci ON c.Id_ciudad = ci.Id_ciudad
+JOIN Departamentos d ON c.Id_depto = d.Id_depto
+JOIN Vendedores v ON f.Id_vendedor = v.Id_vendedor</property>
+                <property
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="Asignaciones entre los parámetros del comando SQL y las variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Connections[OleDbConnection]"
+                  connectionManagerID="{893B7058-B320-4F92-9C87-C61C74F0CA9F}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.DistribuidoraOperativa]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB]"
+                  name="Salida de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].Columns[Nro_Factura]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].ExternalColumns[Nro_Factura]"
+                      lineageId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].Columns[Nro_Factura]"
+                      name="Nro_Factura"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].Columns[Fecha]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].ExternalColumns[Fecha]"
+                      lineageId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].Columns[Fecha]"
+                      name="Fecha"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].Columns[Id_articulo]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].ExternalColumns[Id_articulo]"
+                      lineageId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].Columns[Id_articulo]"
+                      name="Id_articulo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].Columns[Unidades]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].ExternalColumns[Unidades]"
+                      lineageId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].Columns[Unidades]"
+                      name="Unidades"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].Columns[Id_cliente]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].ExternalColumns[Id_cliente]"
+                      lineageId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].Columns[Id_cliente]"
+                      name="Id_cliente"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].Columns[Id_vendedor]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].ExternalColumns[Id_vendedor]"
+                      lineageId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].Columns[Id_vendedor]"
+                      name="Id_vendedor"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].Columns[nombre_producto]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].ExternalColumns[nombre_producto]"
+                      length="200"
+                      lineageId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].Columns[nombre_producto]"
+                      name="nombre_producto"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].Columns[familia_producto]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].ExternalColumns[familia_producto]"
+                      length="200"
+                      lineageId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].Columns[familia_producto]"
+                      name="familia_producto"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].Columns[Nom_ciudad]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].ExternalColumns[Nom_ciudad]"
+                      length="100"
+                      lineageId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].Columns[Nom_ciudad]"
+                      name="Nom_ciudad"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].Columns[Nom_depto]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].ExternalColumns[Nom_depto]"
+                      length="100"
+                      lineageId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].Columns[Nom_depto]"
+                      name="Nom_depto"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].Columns[nombre_vendedor]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].ExternalColumns[nombre_vendedor]"
+                      length="100"
+                      lineageId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].Columns[nombre_vendedor]"
+                      name="nombre_vendedor"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].Columns[Nom_rubro]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].ExternalColumns[Nom_rubro]"
+                      length="100"
+                      lineageId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].Columns[Nom_rubro]"
+                      name="Nom_rubro"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].ExternalColumns[Nro_Factura]"
+                      dataType="i4"
+                      name="Nro_Factura" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].ExternalColumns[Fecha]"
+                      dataType="dbDate"
+                      name="Fecha" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].ExternalColumns[Id_articulo]"
+                      dataType="i4"
+                      name="Id_articulo" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].ExternalColumns[Unidades]"
+                      dataType="i4"
+                      name="Unidades" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].ExternalColumns[Id_cliente]"
+                      dataType="i4"
+                      name="Id_cliente" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].ExternalColumns[Id_vendedor]"
+                      dataType="i4"
+                      name="Id_vendedor" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].ExternalColumns[nombre_producto]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      name="nombre_producto" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].ExternalColumns[familia_producto]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      name="familia_producto" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].ExternalColumns[Nom_ciudad]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="Nom_ciudad" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].ExternalColumns[Nom_depto]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="Nom_depto" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].ExternalColumns[nombre_vendedor]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="nombre_vendedor" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB].ExternalColumns[Nom_rubro]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="Nom_rubro" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de error de origen de OLE DB]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de error de origen de OLE DB].Columns[Nro_Factura]"
+                      dataType="i4"
+                      lineageId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de error de origen de OLE DB].Columns[Nro_Factura]"
+                      name="Nro_Factura" />
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de error de origen de OLE DB].Columns[Fecha]"
+                      dataType="dbDate"
+                      lineageId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de error de origen de OLE DB].Columns[Fecha]"
+                      name="Fecha" />
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de error de origen de OLE DB].Columns[Id_articulo]"
+                      dataType="i4"
+                      lineageId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de error de origen de OLE DB].Columns[Id_articulo]"
+                      name="Id_articulo" />
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de error de origen de OLE DB].Columns[Unidades]"
+                      dataType="i4"
+                      lineageId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de error de origen de OLE DB].Columns[Unidades]"
+                      name="Unidades" />
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de error de origen de OLE DB].Columns[Id_cliente]"
+                      dataType="i4"
+                      lineageId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de error de origen de OLE DB].Columns[Id_cliente]"
+                      name="Id_cliente" />
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de error de origen de OLE DB].Columns[Id_vendedor]"
+                      dataType="i4"
+                      lineageId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de error de origen de OLE DB].Columns[Id_vendedor]"
+                      name="Id_vendedor" />
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de error de origen de OLE DB].Columns[nombre_producto]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      lineageId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de error de origen de OLE DB].Columns[nombre_producto]"
+                      name="nombre_producto" />
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de error de origen de OLE DB].Columns[familia_producto]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      lineageId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de error de origen de OLE DB].Columns[familia_producto]"
+                      name="familia_producto" />
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de error de origen de OLE DB].Columns[Nom_ciudad]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de error de origen de OLE DB].Columns[Nom_ciudad]"
+                      name="Nom_ciudad" />
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de error de origen de OLE DB].Columns[Nom_depto]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de error de origen de OLE DB].Columns[Nom_depto]"
+                      name="Nom_depto" />
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de error de origen de OLE DB].Columns[nombre_vendedor]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de error de origen de OLE DB].Columns[nombre_vendedor]"
+                      name="nombre_vendedor" />
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de error de origen de OLE DB].Columns[Nom_rubro]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de error de origen de OLE DB].Columns[Nom_rubro]"
+                      name="Nom_rubro" />
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Carga Fact_Ventas.Paths[Salida de agregado 1]"
+              endId="Package\Carga Fact_Ventas\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+              name="Salida de agregado 1"
+              startId="Package\Carga Fact_Ventas\cant_ventas?.Outputs[Salida de agregado 1]" />
+            <path
+              refId="Package\Carga Fact_Ventas.Paths[Salida de columna derivada]"
+              endId="Package\Carga Fact_Ventas\Look Up DIM_TIEMPO.Inputs[Entrada de búsqueda]"
+              name="Salida de columna derivada"
+              startId="Package\Carga Fact_Ventas\Derivo anio y mes.Outputs[Salida de columna derivada]" />
+            <path
+              refId="Package\Carga Fact_Ventas.Paths[Salida de entradas coincidentes de búsqueda]"
+              endId="Package\Carga Fact_Ventas\Look Up DIM_DISTR_GEOGRAFICA.Inputs[Entrada de búsqueda]"
+              name="Salida de entradas coincidentes de búsqueda"
+              startId="Package\Carga Fact_Ventas\Look Up DIM_PRODUCTO.Outputs[Salida de entradas coincidentes de búsqueda]" />
+            <path
+              refId="Package\Carga Fact_Ventas.Paths[Salida de entradas coincidentes de búsqueda1]"
+              endId="Package\Carga Fact_Ventas\Look Up DIM_VENDEDOR.Inputs[Entrada de búsqueda]"
+              name="Salida de entradas coincidentes de búsqueda"
+              startId="Package\Carga Fact_Ventas\Look Up DIM_DISTR_GEOGRAFICA.Outputs[Salida de entradas coincidentes de búsqueda]" />
+            <path
+              refId="Package\Carga Fact_Ventas.Paths[Salida de entradas coincidentes de búsqueda2]"
+              endId="Package\Carga Fact_Ventas\Look Up DIM_RUBRO.Inputs[Entrada de búsqueda]"
+              name="Salida de entradas coincidentes de búsqueda"
+              startId="Package\Carga Fact_Ventas\Look Up DIM_VENDEDOR.Outputs[Salida de entradas coincidentes de búsqueda]" />
+            <path
+              refId="Package\Carga Fact_Ventas.Paths[Salida de entradas coincidentes de búsqueda3]"
+              endId="Package\Carga Fact_Ventas\Derivo anio y mes.Inputs[Entrada de columna derivada]"
+              name="Salida de entradas coincidentes de búsqueda"
+              startId="Package\Carga Fact_Ventas\Look Up DIM_RUBRO.Outputs[Salida de entradas coincidentes de búsqueda]" />
+            <path
+              refId="Package\Carga Fact_Ventas.Paths[Salida de entradas coincidentes de búsqueda4]"
+              endId="Package\Carga Fact_Ventas\cant_ventas?.Inputs[Entrada de agregado 1]"
+              name="Salida de entradas coincidentes de búsqueda"
+              startId="Package\Carga Fact_Ventas\Look Up DIM_TIEMPO.Outputs[Salida de entradas coincidentes de búsqueda]" />
+            <path
+              refId="Package\Carga Fact_Ventas.Paths[Salida de origen de OLE DB]"
+              endId="Package\Carga Fact_Ventas\Look Up DIM_PRODUCTO.Inputs[Entrada de búsqueda]"
+              name="Salida de origen de OLE DB"
+              startId="Package\Carga Fact_Ventas\Origen Facturas-Operativa.Outputs[Salida de origen de OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="174,42"
+          Id="Package\Carga Fact_Ventas"
+          TopLeft="266,163" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Carga Fact_Ventas">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="209,42"
+          Id="Package\Carga Fact_Ventas\Origen Facturas-Operativa"
+          TopLeft="349,176" />
+        <NodeLayout
+          Size="212,42"
+          Id="Package\Carga Fact_Ventas\Look Up DIM_PRODUCTO"
+          TopLeft="350,267" />
+        <EdgeLayout
+          Id="Package\Carga Fact_Ventas.Paths[Salida de origen de OLE DB]"
+          TopLeft="454.75,218">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,49"
+              Start="0,0"
+              End="0,41.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8,12.75,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="261,42"
+          Id="Package\Carga Fact_Ventas\Look Up DIM_DISTR_GEOGRAFICA"
+          TopLeft="318,364" />
+        <EdgeLayout
+          Id="Package\Carga Fact_Ventas.Paths[Salida de entradas coincidentes de búsqueda]"
+          TopLeft="452.25,309">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,55"
+              Start="0,0"
+              End="0,47.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-108.50701171875,15.75,217.0140234375,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="211,42"
+          Id="Package\Carga Fact_Ventas\Look Up DIM_VENDEDOR"
+          TopLeft="341,456" />
+        <EdgeLayout
+          Id="Package\Carga Fact_Ventas.Paths[Salida de entradas coincidentes de búsqueda1]"
+          TopLeft="447.5,406">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,50"
+              Start="0,0"
+              End="0,42.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-99.8190234375,15.15234375,199.638046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="189,42"
+          Id="Package\Carga Fact_Ventas\Look Up DIM_RUBRO"
+          TopLeft="351,552" />
+        <EdgeLayout
+          Id="Package\Carga Fact_Ventas.Paths[Salida de entradas coincidentes de búsqueda2]"
+          TopLeft="446,498">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,54"
+              Start="0,0"
+              End="0,46.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-99.8190234375,17.15234375,199.638046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="191,42"
+          Id="Package\Carga Fact_Ventas\Look Up DIM_TIEMPO"
+          TopLeft="356,697" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\Carga Fact_Ventas\Derivo anio y mes"
+          TopLeft="367,618" />
+        <EdgeLayout
+          Id="Package\Carga Fact_Ventas.Paths[Salida de entradas coincidentes de búsqueda3]"
+          TopLeft="448,594">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,24"
+              Start="0,0"
+              End="0,16.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-99.8190234375,2.15234375,199.638046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Carga Fact_Ventas.Paths[Salida de columna derivada]"
+          TopLeft="451,660">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37"
+              Start="0,0"
+              End="0,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="144,42"
+          Id="Package\Carga Fact_Ventas\cant_ventas?"
+          TopLeft="382,773" />
+        <EdgeLayout
+          Id="Package\Carga Fact_Ventas.Paths[Salida de entradas coincidentes de búsqueda4]"
+          TopLeft="452.75,739">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34"
+              Start="0,0"
+              End="0,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-99.8190234375,7.15234375,199.638046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="175,42"
+          Id="Package\Carga Fact_Ventas\Destino de OLE DB"
+          TopLeft="371,843" />
+        <EdgeLayout
+          Id="Package\Carga Fact_Ventas.Paths[Salida de agregado 1]"
+          TopLeft="456.25,815">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,28"
+              Start="0,0"
+              End="0,20.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Carga Fact_Ventas\Origen Facturas-Operativa">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Carga Fact_Ventas\Look Up DIM_PRODUCTO">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Dim_Producto]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Carga Fact_Ventas\Look Up DIM_DISTR_GEOGRAFICA">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Dim_Distr_Geografica]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Carga Fact_Ventas\Look Up DIM_VENDEDOR">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Dim_Vendedor]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Carga Fact_Ventas\Look Up DIM_RUBRO">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Dim_Rubro]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Carga Fact_Ventas\Look Up DIM_TIEMPO">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Dim_Tiempo]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Carga Fact_Ventas\Destino de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

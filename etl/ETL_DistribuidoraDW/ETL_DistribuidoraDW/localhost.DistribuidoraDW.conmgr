@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="localhost.DistribuidoraDW"
+  DTS:DTSID="{A8560F39-9EDC-4801-B361-12AC430A1ADF}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=localhost;Initial Catalog=DistribuidoraDW;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-{A8560F39-9EDC-4801-B361-12AC430A1ADF}localhost.DistribuidoraDW;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
