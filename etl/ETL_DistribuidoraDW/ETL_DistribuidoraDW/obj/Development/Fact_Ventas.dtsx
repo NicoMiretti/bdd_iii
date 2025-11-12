@@ -11,8 +11,8 @@
   DTS:LocaleID="22538"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="19"
-  DTS:VersionGUID="{6FD47692-4FC1-473F-AF5A-51448F4E73A7}">
+  DTS:VersionBuild="20"
+  DTS:VersionGUID="{7D18812D-188B-4705-9FA0-44FFC76E824A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -615,10 +615,6 @@
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Carga Fact_Ventas\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[id_fact]"
-                      dataType="i4"
-                      name="id_fact" />
-                    <externalMetadataColumn
                       refId="Package\Carga Fact_Ventas\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[id_tiempo]"
                       dataType="i4"
                       name="id_tiempo" />
@@ -900,7 +896,7 @@ where [refTable].[nombre_producto] = ? and [refTable].[familia_producto] = ?</pr
                 <property
                   dataType="System.String"
                   description="Indica si se debe hacer referencia a metadatos en formato XML."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_producto" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="familia_producto" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="nombre_producto" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_producto" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="familia_producto" dataType="DT_STR" length="200" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="nombre_producto" dataType="DT_STR" length="200" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -1958,9 +1954,37 @@ JOIN Vendedores v ON f.Id_vendedor = v.Id_vendedor</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="191,42"
+          Id="Package\Carga Fact_Ventas\Look Up DIM_TIEMPO"
+          TopLeft="356,697" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\Carga Fact_Ventas\Derivo anio y mes"
+          TopLeft="367,618" />
+        <NodeLayout
+          Size="211,42"
+          Id="Package\Carga Fact_Ventas\Look Up DIM_VENDEDOR"
+          TopLeft="341,456" />
+        <NodeLayout
+          Size="189,42"
+          Id="Package\Carga Fact_Ventas\Look Up DIM_RUBRO"
+          TopLeft="351,552" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\Carga Fact_Ventas\Destino de OLE DB"
+          TopLeft="371,843" />
+        <NodeLayout
+          Size="261,42"
+          Id="Package\Carga Fact_Ventas\Look Up DIM_DISTR_GEOGRAFICA"
+          TopLeft="318,364" />
+        <NodeLayout
           Size="209,42"
           Id="Package\Carga Fact_Ventas\Origen Facturas-Operativa"
           TopLeft="349,176" />
+        <NodeLayout
+          Size="144,42"
+          Id="Package\Carga Fact_Ventas\cant_ventas?"
+          TopLeft="382,773" />
         <NodeLayout
           Size="212,42"
           Id="Package\Carga Fact_Ventas\Look Up DIM_PRODUCTO"
@@ -1989,98 +2013,30 @@ JOIN Vendedores v ON f.Id_vendedor = v.Id_vendedor</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="261,42"
-          Id="Package\Carga Fact_Ventas\Look Up DIM_DISTR_GEOGRAFICA"
-          TopLeft="318,364" />
         <EdgeLayout
-          Id="Package\Carga Fact_Ventas.Paths[Salida de entradas coincidentes de búsqueda]"
-          TopLeft="452.25,309">
+          Id="Package\Carga Fact_Ventas.Paths[Salida de entradas coincidentes de búsqueda4]"
+          TopLeft="452.75,739">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,55"
+              EndConnector="0,34"
               Start="0,0"
-              End="0,47.5">
+              End="0,26.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,47.5" />
+                    End="0,26.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-108.50701171875,15.75,217.0140234375,16"
+              BoundingBox="-99.8190234375,7.15234375,199.638046875,12.1953125"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="211,42"
-          Id="Package\Carga Fact_Ventas\Look Up DIM_VENDEDOR"
-          TopLeft="341,456" />
-        <EdgeLayout
-          Id="Package\Carga Fact_Ventas.Paths[Salida de entradas coincidentes de búsqueda1]"
-          TopLeft="447.5,406">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,50"
-              Start="0,0"
-              End="0,42.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,42.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-99.8190234375,15.15234375,199.638046875,12.1953125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="189,42"
-          Id="Package\Carga Fact_Ventas\Look Up DIM_RUBRO"
-          TopLeft="351,552" />
-        <EdgeLayout
-          Id="Package\Carga Fact_Ventas.Paths[Salida de entradas coincidentes de búsqueda2]"
-          TopLeft="446,498">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,54"
-              Start="0,0"
-              End="0,46.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,46.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-99.8190234375,17.15234375,199.638046875,12.1953125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="191,42"
-          Id="Package\Carga Fact_Ventas\Look Up DIM_TIEMPO"
-          TopLeft="356,697" />
-        <NodeLayout
-          Size="167,42"
-          Id="Package\Carga Fact_Ventas\Derivo anio y mes"
-          TopLeft="367,618" />
         <EdgeLayout
           Id="Package\Carga Fact_Ventas.Paths[Salida de entradas coincidentes de búsqueda3]"
           TopLeft="448,594">
@@ -2106,6 +2062,78 @@ JOIN Vendedores v ON f.Id_vendedor = v.Id_vendedor</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Carga Fact_Ventas.Paths[Salida de entradas coincidentes de búsqueda2]"
+          TopLeft="446,498">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,54"
+              Start="0,0"
+              End="0,46.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-99.8190234375,17.15234375,199.638046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Carga Fact_Ventas.Paths[Salida de entradas coincidentes de búsqueda1]"
+          TopLeft="447.5,406">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,50"
+              Start="0,0"
+              End="0,42.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-99.8190234375,15.15234375,199.638046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Carga Fact_Ventas.Paths[Salida de entradas coincidentes de búsqueda]"
+          TopLeft="452.25,309">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,55"
+              Start="0,0"
+              End="0,47.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-108.50701171875,15.75,217.0140234375,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Carga Fact_Ventas.Paths[Salida de columna derivada]"
           TopLeft="451,660">
           <EdgeLayout.Curve>
@@ -2127,38 +2155,6 @@ JOIN Vendedores v ON f.Id_vendedor = v.Id_vendedor</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="144,42"
-          Id="Package\Carga Fact_Ventas\cant_ventas?"
-          TopLeft="382,773" />
-        <EdgeLayout
-          Id="Package\Carga Fact_Ventas.Paths[Salida de entradas coincidentes de búsqueda4]"
-          TopLeft="452.75,739">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,34"
-              Start="0,0"
-              End="0,26.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-99.8190234375,7.15234375,199.638046875,12.1953125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="175,42"
-          Id="Package\Carga Fact_Ventas\Destino de OLE DB"
-          TopLeft="371,843" />
         <EdgeLayout
           Id="Package\Carga Fact_Ventas.Paths[Salida de agregado 1]"
           TopLeft="456.25,815">
@@ -2185,53 +2181,22 @@ JOIN Vendedores v ON f.Id_vendedor = v.Id_vendedor</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Carga Fact_Ventas\Origen Facturas-Operativa">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Carga Fact_Ventas\Look Up DIM_PRODUCTO">
+    design-time-name="Package\Carga Fact_Ventas\Look Up DIM_TIEMPO">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[Dim_Producto]</Value>
+          type="q3:string">[dbo].[Dim_Tiempo]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Carga Fact_Ventas\Look Up DIM_DISTR_GEOGRAFICA">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Dim_Distr_Geografica]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2254,7 +2219,7 @@ JOIN Vendedores v ON f.Id_vendedor = v.Id_vendedor</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2285,29 +2250,6 @@ JOIN Vendedores v ON f.Id_vendedor = v.Id_vendedor</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Carga Fact_Ventas\Look Up DIM_TIEMPO">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Dim_Tiempo]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Carga Fact_Ventas\Destino de OLE DB">
     <Properties>
       <Property>
@@ -2317,6 +2259,60 @@ JOIN Vendedores v ON f.Id_vendedor = v.Id_vendedor</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Carga Fact_Ventas\Look Up DIM_DISTR_GEOGRAFICA">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Dim_Distr_Geografica]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Carga Fact_Ventas\Origen Facturas-Operativa">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Carga Fact_Ventas\Look Up DIM_PRODUCTO">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Dim_Producto]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

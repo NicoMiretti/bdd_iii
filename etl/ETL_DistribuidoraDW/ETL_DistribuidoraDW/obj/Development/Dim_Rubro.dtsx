@@ -11,20 +11,20 @@
   DTS:LocaleID="22538"
   DTS:ObjectName="DimCliente"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{CC09F2CE-A306-42BA-A4D4-68C379580C0D}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{BF05EA38-211A-4AF6-8624-4610A5A367FB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Cargar Dim_Cliente"
+      DTS:refId="Package\Cargar Dim_Rubro"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarea Flujo de datos"
       DTS:DTSID="{5C97A21E-E05E-46CD-A532-1AAE3076207E}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Cargar Dim_Cliente"
+      DTS:ObjectName="Cargar Dim_Rubro"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -32,7 +32,7 @@
           version="1">
           <components>
             <component
-              refId="Package\Cargar Dim_Cliente\Destino Rubro-DW"
+              refId="Package\Cargar Dim_Rubro\Destino Rubro-DW"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
               description="Destino de OLE DB"
@@ -89,7 +89,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Cargar Dim_Cliente\Destino Rubro-DW.Connections[OleDbConnection]"
+                  refId="Package\Cargar Dim_Rubro\Destino Rubro-DW.Connections[OleDbConnection]"
                   connectionManagerID="{A8560F39-9EDC-4801-B361-12AC430A1ADF}:external"
                   connectionManagerRefId="Project.ConnectionManagers[localhost.DistribuidoraDW]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
@@ -97,29 +97,29 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Cargar Dim_Cliente\Destino Rubro-DW.Inputs[Entrada de destino de OLE DB]"
+                  refId="Package\Cargar Dim_Rubro\Destino Rubro-DW.Inputs[Entrada de destino de OLE DB]"
                   errorOrTruncationOperation="Insertar"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="Entrada de destino de OLE DB">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Cargar Dim_Cliente\Destino Rubro-DW.Inputs[Entrada de destino de OLE DB].Columns[Nom_rubro]"
+                      refId="Package\Cargar Dim_Rubro\Destino Rubro-DW.Inputs[Entrada de destino de OLE DB].Columns[Nom_rubro]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="Nom_rubro"
-                      externalMetadataColumnId="Package\Cargar Dim_Cliente\Destino Rubro-DW.Inputs[Entrada de destino de OLE DB].ExternalColumns[nom_rubro]"
-                      lineageId="Package\Cargar Dim_Cliente\Origen Rubros-Operativa.Outputs[Salida de origen de OLE DB].Columns[Nom_rubro]" />
+                      externalMetadataColumnId="Package\Cargar Dim_Rubro\Destino Rubro-DW.Inputs[Entrada de destino de OLE DB].ExternalColumns[nom_rubro]"
+                      lineageId="Package\Cargar Dim_Rubro\Origen Rubros-Operativa.Outputs[Salida de origen de OLE DB].Columns[Nom_rubro]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Cargar Dim_Cliente\Destino Rubro-DW.Inputs[Entrada de destino de OLE DB].ExternalColumns[id_rubro]"
+                      refId="Package\Cargar Dim_Rubro\Destino Rubro-DW.Inputs[Entrada de destino de OLE DB].ExternalColumns[id_rubro]"
                       dataType="i4"
                       name="id_rubro" />
                     <externalMetadataColumn
-                      refId="Package\Cargar Dim_Cliente\Destino Rubro-DW.Inputs[Entrada de destino de OLE DB].ExternalColumns[nom_rubro]"
+                      refId="Package\Cargar Dim_Rubro\Destino Rubro-DW.Inputs[Entrada de destino de OLE DB].ExternalColumns[nom_rubro]"
                       codePage="1252"
                       dataType="str"
                       length="100"
@@ -129,22 +129,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Cargar Dim_Cliente\Destino Rubro-DW.Outputs[Salida de error de destino de OLE DB]"
+                  refId="Package\Cargar Dim_Rubro\Destino Rubro-DW.Outputs[Salida de error de destino de OLE DB]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Salida de error de destino de OLE DB"
-                  synchronousInputId="Package\Cargar Dim_Cliente\Destino Rubro-DW.Inputs[Entrada de destino de OLE DB]">
+                  synchronousInputId="Package\Cargar Dim_Rubro\Destino Rubro-DW.Inputs[Entrada de destino de OLE DB]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Cargar Dim_Cliente\Destino Rubro-DW.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      refId="Package\Cargar Dim_Rubro\Destino Rubro-DW.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Cargar Dim_Cliente\Destino Rubro-DW.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      lineageId="Package\Cargar Dim_Rubro\Destino Rubro-DW.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Cargar Dim_Cliente\Destino Rubro-DW.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      refId="Package\Cargar Dim_Rubro\Destino Rubro-DW.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Cargar Dim_Cliente\Destino Rubro-DW.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      lineageId="Package\Cargar Dim_Rubro\Destino Rubro-DW.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -153,7 +153,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Cargar Dim_Cliente\Look Up para duplicados"
+              refId="Package\Cargar Dim_Rubro\Look Up para duplicados"
               componentClassID="Microsoft.Lookup"
               contactInfo="Búsqueda;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;6"
               description="Combina columnas adicionales con el flujo de datos mediante la búsqueda de valores en una tabla. Por ejemplo, se combina la columna 'id. de empleado' con la tabla de empleados para obtener la 'fecha de contratación' y 'el nombre de empleado'. Se recomienda esta transformación cuando hay suficiente espacio en memoria para la tabla de búsqueda."
@@ -209,7 +209,7 @@ where [refTable].[nom_rubro] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
-                  name="ParameterMap">#{Package\Cargar Dim_Cliente\Origen Rubros-Operativa.Outputs[Salida de origen de OLE DB].Columns[Nom_rubro]};</property>
+                  name="ParameterMap">#{Package\Cargar Dim_Rubro\Origen Rubros-Operativa.Outputs[Salida de origen de OLE DB].Columns[Nom_rubro]};</property>
                 <property
                   dataType="System.Int32"
                   description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
@@ -221,7 +221,7 @@ where [refTable].[nom_rubro] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Cargar Dim_Cliente\Look Up para duplicados.Connections[OleDbConnection]"
+                  refId="Package\Cargar Dim_Rubro\Look Up para duplicados.Connections[OleDbConnection]"
                   connectionManagerID="{A8560F39-9EDC-4801-B361-12AC430A1ADF}:external"
                   connectionManagerRefId="Project.ConnectionManagers[localhost.DistribuidoraDW]"
                   description="Administrador de conexiones utilizado para obtener acceso a los datos de búsqueda."
@@ -229,16 +229,16 @@ where [refTable].[nom_rubro] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Cargar Dim_Cliente\Look Up para duplicados.Inputs[Entrada de búsqueda]"
+                  refId="Package\Cargar Dim_Rubro\Look Up para duplicados.Inputs[Entrada de búsqueda]"
                   name="Entrada de búsqueda">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Cargar Dim_Cliente\Look Up para duplicados.Inputs[Entrada de búsqueda].Columns[Nom_rubro]"
+                      refId="Package\Cargar Dim_Rubro\Look Up para duplicados.Inputs[Entrada de búsqueda].Columns[Nom_rubro]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="Nom_rubro"
-                      lineageId="Package\Cargar Dim_Cliente\Origen Rubros-Operativa.Outputs[Salida de origen de OLE DB].Columns[Nom_rubro]">
+                      lineageId="Package\Cargar Dim_Rubro\Origen Rubros-Operativa.Outputs[Salida de origen de OLE DB].Columns[Nom_rubro]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -256,17 +256,17 @@ where [refTable].[nom_rubro] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Cargar Dim_Cliente\Look Up para duplicados.Outputs[Salida de entradas coincidentes de búsqueda]"
+                  refId="Package\Cargar Dim_Rubro\Look Up para duplicados.Outputs[Salida de entradas coincidentes de búsqueda]"
                   errorOrTruncationOperation="Búsqueda"
                   exclusionGroup="1"
                   name="Salida de entradas coincidentes de búsqueda"
-                  synchronousInputId="Package\Cargar Dim_Cliente\Look Up para duplicados.Inputs[Entrada de búsqueda]">
+                  synchronousInputId="Package\Cargar Dim_Rubro\Look Up para duplicados.Inputs[Entrada de búsqueda]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Cargar Dim_Cliente\Look Up para duplicados.Outputs[Salida de entradas coincidentes de búsqueda].Columns[id_rubro]"
+                      refId="Package\Cargar Dim_Rubro\Look Up para duplicados.Outputs[Salida de entradas coincidentes de búsqueda].Columns[id_rubro]"
                       dataType="i4"
                       errorOrTruncationOperation="Copiar columna"
-                      lineageId="Package\Cargar Dim_Cliente\Look Up para duplicados.Outputs[Salida de entradas coincidentes de búsqueda].Columns[id_rubro]"
+                      lineageId="Package\Cargar Dim_Rubro\Look Up para duplicados.Outputs[Salida de entradas coincidentes de búsqueda].Columns[id_rubro]"
                       name="id_rubro"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -277,12 +277,12 @@ where [refTable].[nom_rubro] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Cargar Dim_Cliente\Look Up para duplicados.Outputs[Salida de entradas coincidentes de búsqueda].Columns[nom_rubro]"
+                      refId="Package\Cargar Dim_Rubro\Look Up para duplicados.Outputs[Salida de entradas coincidentes de búsqueda].Columns[nom_rubro]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Copiar columna"
                       length="100"
-                      lineageId="Package\Cargar Dim_Cliente\Look Up para duplicados.Outputs[Salida de entradas coincidentes de búsqueda].Columns[nom_rubro]"
+                      lineageId="Package\Cargar Dim_Rubro\Look Up para duplicados.Outputs[Salida de entradas coincidentes de búsqueda].Columns[nom_rubro]"
                       name="nom_rubro"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -296,30 +296,30 @@ where [refTable].[nom_rubro] = ?</property>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Cargar Dim_Cliente\Look Up para duplicados.Outputs[Salida de entradas no coincidentes de búsqueda]"
+                  refId="Package\Cargar Dim_Rubro\Look Up para duplicados.Outputs[Salida de entradas no coincidentes de búsqueda]"
                   description="Salida de búsqueda que trata las filas sin entradas coincidentes en el conjunto de datos de referencia. Utilice esta salida cuando la propiedad NoMatchBehavior esté establecida en 'Enviar las filas sin entradas coincidentes a la salida de entradas no coincidentes'."
                   exclusionGroup="1"
                   name="Salida de entradas no coincidentes de búsqueda"
-                  synchronousInputId="Package\Cargar Dim_Cliente\Look Up para duplicados.Inputs[Entrada de búsqueda]">
+                  synchronousInputId="Package\Cargar Dim_Rubro\Look Up para duplicados.Inputs[Entrada de búsqueda]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Cargar Dim_Cliente\Look Up para duplicados.Outputs[Salida de error de búsqueda]"
+                  refId="Package\Cargar Dim_Rubro\Look Up para duplicados.Outputs[Salida de error de búsqueda]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Salida de error de búsqueda"
-                  synchronousInputId="Package\Cargar Dim_Cliente\Look Up para duplicados.Inputs[Entrada de búsqueda]">
+                  synchronousInputId="Package\Cargar Dim_Rubro\Look Up para duplicados.Inputs[Entrada de búsqueda]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Cargar Dim_Cliente\Look Up para duplicados.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
+                      refId="Package\Cargar Dim_Rubro\Look Up para duplicados.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Cargar Dim_Cliente\Look Up para duplicados.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
+                      lineageId="Package\Cargar Dim_Rubro\Look Up para duplicados.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Cargar Dim_Cliente\Look Up para duplicados.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                      refId="Package\Cargar Dim_Rubro\Look Up para duplicados.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Cargar Dim_Cliente\Look Up para duplicados.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                      lineageId="Package\Cargar Dim_Rubro\Look Up para duplicados.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -328,7 +328,7 @@ where [refTable].[nom_rubro] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Cargar Dim_Cliente\Origen Rubros-Operativa"
+              refId="Package\Cargar Dim_Rubro\Origen Rubros-Operativa"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7"
               description="Origen de OLE DB"
@@ -378,7 +378,7 @@ FROM Rubros;</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Cargar Dim_Cliente\Origen Rubros-Operativa.Connections[OleDbConnection]"
+                  refId="Package\Cargar Dim_Rubro\Origen Rubros-Operativa.Connections[OleDbConnection]"
                   connectionManagerID="{893B7058-B320-4F92-9C87-C61C74F0CA9F}:external"
                   connectionManagerRefId="Project.ConnectionManagers[localhost.DistribuidoraOperativa]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
@@ -386,25 +386,25 @@ FROM Rubros;</property>
               </connections>
               <outputs>
                 <output
-                  refId="Package\Cargar Dim_Cliente\Origen Rubros-Operativa.Outputs[Salida de origen de OLE DB]"
+                  refId="Package\Cargar Dim_Rubro\Origen Rubros-Operativa.Outputs[Salida de origen de OLE DB]"
                   name="Salida de origen de OLE DB">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Cargar Dim_Cliente\Origen Rubros-Operativa.Outputs[Salida de origen de OLE DB].Columns[Nom_rubro]"
+                      refId="Package\Cargar Dim_Rubro\Origen Rubros-Operativa.Outputs[Salida de origen de OLE DB].Columns[Nom_rubro]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Cargar Dim_Cliente\Origen Rubros-Operativa.Outputs[Salida de origen de OLE DB].ExternalColumns[Nom_rubro]"
+                      externalMetadataColumnId="Package\Cargar Dim_Rubro\Origen Rubros-Operativa.Outputs[Salida de origen de OLE DB].ExternalColumns[Nom_rubro]"
                       length="100"
-                      lineageId="Package\Cargar Dim_Cliente\Origen Rubros-Operativa.Outputs[Salida de origen de OLE DB].Columns[Nom_rubro]"
+                      lineageId="Package\Cargar Dim_Rubro\Origen Rubros-Operativa.Outputs[Salida de origen de OLE DB].Columns[Nom_rubro]"
                       name="Nom_rubro"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Cargar Dim_Cliente\Origen Rubros-Operativa.Outputs[Salida de origen de OLE DB].ExternalColumns[Nom_rubro]"
+                      refId="Package\Cargar Dim_Rubro\Origen Rubros-Operativa.Outputs[Salida de origen de OLE DB].ExternalColumns[Nom_rubro]"
                       codePage="1252"
                       dataType="str"
                       length="100"
@@ -412,27 +412,27 @@ FROM Rubros;</property>
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Cargar Dim_Cliente\Origen Rubros-Operativa.Outputs[Salida de error de origen de OLE DB]"
+                  refId="Package\Cargar Dim_Rubro\Origen Rubros-Operativa.Outputs[Salida de error de origen de OLE DB]"
                   isErrorOut="true"
                   name="Salida de error de origen de OLE DB">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Cargar Dim_Cliente\Origen Rubros-Operativa.Outputs[Salida de error de origen de OLE DB].Columns[Nom_rubro]"
+                      refId="Package\Cargar Dim_Rubro\Origen Rubros-Operativa.Outputs[Salida de error de origen de OLE DB].Columns[Nom_rubro]"
                       codePage="1252"
                       dataType="str"
                       length="100"
-                      lineageId="Package\Cargar Dim_Cliente\Origen Rubros-Operativa.Outputs[Salida de error de origen de OLE DB].Columns[Nom_rubro]"
+                      lineageId="Package\Cargar Dim_Rubro\Origen Rubros-Operativa.Outputs[Salida de error de origen de OLE DB].Columns[Nom_rubro]"
                       name="Nom_rubro" />
                     <outputColumn
-                      refId="Package\Cargar Dim_Cliente\Origen Rubros-Operativa.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      refId="Package\Cargar Dim_Rubro\Origen Rubros-Operativa.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Cargar Dim_Cliente\Origen Rubros-Operativa.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      lineageId="Package\Cargar Dim_Rubro\Origen Rubros-Operativa.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Cargar Dim_Cliente\Origen Rubros-Operativa.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      refId="Package\Cargar Dim_Rubro\Origen Rubros-Operativa.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Cargar Dim_Cliente\Origen Rubros-Operativa.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      lineageId="Package\Cargar Dim_Rubro\Origen Rubros-Operativa.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -443,15 +443,15 @@ FROM Rubros;</property>
           </components>
           <paths>
             <path
-              refId="Package\Cargar Dim_Cliente.Paths[Salida de entradas no coincidentes de búsqueda]"
-              endId="Package\Cargar Dim_Cliente\Destino Rubro-DW.Inputs[Entrada de destino de OLE DB]"
+              refId="Package\Cargar Dim_Rubro.Paths[Salida de entradas no coincidentes de búsqueda]"
+              endId="Package\Cargar Dim_Rubro\Destino Rubro-DW.Inputs[Entrada de destino de OLE DB]"
               name="Salida de entradas no coincidentes de búsqueda"
-              startId="Package\Cargar Dim_Cliente\Look Up para duplicados.Outputs[Salida de entradas no coincidentes de búsqueda]" />
+              startId="Package\Cargar Dim_Rubro\Look Up para duplicados.Outputs[Salida de entradas no coincidentes de búsqueda]" />
             <path
-              refId="Package\Cargar Dim_Cliente.Paths[Salida de origen de OLE DB]"
-              endId="Package\Cargar Dim_Cliente\Look Up para duplicados.Inputs[Entrada de búsqueda]"
+              refId="Package\Cargar Dim_Rubro.Paths[Salida de origen de OLE DB]"
+              endId="Package\Cargar Dim_Rubro\Look Up para duplicados.Inputs[Entrada de búsqueda]"
               name="Salida de origen de OLE DB"
-              startId="Package\Cargar Dim_Cliente\Origen Rubros-Operativa.Outputs[Salida de origen de OLE DB]" />
+              startId="Package\Cargar Dim_Rubro\Origen Rubros-Operativa.Outputs[Salida de origen de OLE DB]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -470,31 +470,31 @@ FROM Rubros;</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="176,42"
-          Id="Package\Cargar Dim_Cliente"
+          Size="166,42"
+          Id="Package\Cargar Dim_Rubro"
           TopLeft="189,127" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Cargar Dim_Cliente">
+    design-time-name="Package\Cargar Dim_Rubro">
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="171,42"
-          Id="Package\Cargar Dim_Cliente\Destino Rubro-DW"
+          Id="Package\Cargar Dim_Rubro\Destino Rubro-DW"
           TopLeft="289,317" />
         <NodeLayout
-          Size="202,42"
-          Id="Package\Cargar Dim_Cliente\Origen Rubros-Operativa"
-          TopLeft="270,161" />
-        <NodeLayout
           Size="200,42"
-          Id="Package\Cargar Dim_Cliente\Look Up para duplicados"
+          Id="Package\Cargar Dim_Rubro\Look Up para duplicados"
           TopLeft="272,236" />
+        <NodeLayout
+          Size="202,42"
+          Id="Package\Cargar Dim_Rubro\Origen Rubros-Operativa"
+          TopLeft="270,161" />
         <EdgeLayout
-          Id="Package\Cargar Dim_Cliente.Paths[Salida de origen de OLE DB]"
+          Id="Package\Cargar Dim_Rubro.Paths[Salida de origen de OLE DB]"
           TopLeft="371.5,203">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -516,7 +516,7 @@ FROM Rubros;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Cargar Dim_Cliente.Paths[Salida de entradas no coincidentes de búsqueda]"
+          Id="Package\Cargar Dim_Rubro.Paths[Salida de entradas no coincidentes de búsqueda]"
           TopLeft="373.25,278">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -543,7 +543,7 @@ FROM Rubros;</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Cargar Dim_Cliente\Destino Rubro-DW">
+    design-time-name="Package\Cargar Dim_Rubro\Destino Rubro-DW">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -556,20 +556,12 @@ FROM Rubros;</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Cargar Dim_Cliente\Origen Rubros-Operativa">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Cargar Dim_Cliente\Look Up para duplicados">
+    design-time-name="Package\Cargar Dim_Rubro\Look Up para duplicados">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -579,8 +571,16 @@ FROM Rubros;</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Cargar Dim_Rubro\Origen Rubros-Operativa">
+    <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>

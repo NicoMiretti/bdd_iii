@@ -44,13 +44,13 @@ CREATE TABLE Dim_Rubro (
 
 -- Tabla de Hechos Ventas
 CREATE TABLE Fact_Ventas (
-    id_fact INT IDENTITY(1,1) PRIMARY KEY,
     id_tiempo INT,
     id_producto INT,
     id_distr_geografica INT,
     id_vendedor INT,
     id_rubro INT,
     cant_ventas INT,
+    PRIMARY KEY (id_tiempo, id_producto, id_distr_geografica, id_vendedor, id_rubro),
     FOREIGN KEY (id_tiempo) REFERENCES Dim_Tiempo(id_tiempo),
     FOREIGN KEY (id_producto) REFERENCES Dim_Producto(id_producto),
     FOREIGN KEY (id_distr_geografica) REFERENCES Dim_Distr_Geografica(id_distr_geografica),
